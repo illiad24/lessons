@@ -1,0 +1,72 @@
+@import url('reset.css');
+
+[class*="__size"] {
+    font-size: 30px;
+}
+
+a {
+    color: red;
+}
+
+.header h1 {
+    color: #551515;
+}
+
+.main {
+    color: #1daba1;
+}
+
+.text {
+    color: brown;
+}
+
+.text-p {}
+
+.text .text-p {
+    color: darkgoldenrod;
+}
+
+.links {}
+
+.link-title {}
+
+.link-title,
+.money p {
+    color: rgb(34, 64, 139);
+}
+
+.title {
+    color: rgb(158, 23, 108);
+}
+
+.about {}
+
+.image {}
+
+.money {}
+
+.footer {}
+
+.text-money.text {
+    color: greenyellow;
+}
+
+.text-money * {
+    color: olive;
+}
+
+p span {
+    color: rgb(83, 71, 83);
+}
+
+.money>.lorem {
+    color: yellow;
+}
+
+.lorem~p {
+    color: #1f054f;
+}
+
+.lorem+p {
+    color: #b6b1c0;
+}
