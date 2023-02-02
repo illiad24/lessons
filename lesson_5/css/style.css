@@ -1,0 +1,97 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: #6C757D;
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* ======================= */
+[class*="__container"] {
+    max-width: 1270px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+[class*="__content"] {
+    max-width: 816px;
+    margin: 0 auto;
+}
+
+/* =========================== */
+.title {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1.6;
+    color: #212529;
+}
+
+.text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.78;
+    /* 25/14 */
+    color: #6C757D;
+}
+
+.image {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+/* ================================ */
+.page {}
+
+.page__happy {
+    padding-top: 15px;
+}
+
+.happy {}
+
+.happy__container {}
+
+.happy__content {}
+
+.happy__title {
+    max-width: 400px;
+}
+
+.happy__text {}
+
+.happy__text p {
+    margin-top: 38px;
+}
+
+.happy__image {}
+
+.page__success {}
+
+.success {
+    padding-bottom: 60px;
+}
+
+.success__container {}
+
+.success__content {}
+
+.success__title {
+    max-width: 605px;
+}
+
+.success__text {}
+
+.success__text p {
+    margin-top: 38px;
+}
+
+.success__images {}
+
+
+
+.success__images img {
+    max-width: 100%;
+
+}
