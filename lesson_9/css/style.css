@@ -1,0 +1,42 @@
+@import url('reset.css');
+
+body {
+    font-size: 24px;
+    background-color: grey;
+    font-weight: 700;
+    color: #fff;
+}
+
+[class*="__container"] {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.text {
+    text-align: center;
+}
+
+.text:not(:last-child) {
+    margin-bottom: 32px;
+}
+
+img {
+    max-width: 100%;
+}
+
+img:not(:last-child) {
+    margin-right: 32px;
+    margin-bottom: 32px;
+}
+
+
+
+
+.main__content img {
+    border-radius: 15px;
+}
+
+.avatar img {
+    border-radius: 50%;
+}
