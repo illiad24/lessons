@@ -1,0 +1,760 @@
+@import url('reset.css');
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+
+}
+
+.wrap {
+    height: 100vh;
+    background: url('../img/dorga.jpg') 0 100% / cover;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 100px;
+}
+
+body {}
+
+/* car */
+.car {
+    position: relative;
+    width: 600px;
+    height: 250px;
+    background-color: #364230;
+    border-radius: 40px 50px 20px 20px;
+    transform: translate(-1100px, 0);
+    animation: car-drive 5s linear forwards, car-drive_2 3s ease forwards 14s;
+    z-index: 2;
+}
+
+.gun {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    width: 140px;
+    height: 7px;
+    background: rgb(8, 15, 8);
+    border: 1px #000 solid;
+    border-radius: 5px 10px 5px 0;
+    transform: translate(-60px, 100px);
+    animation: gun 2s ease forwards 7s;
+}
+
+.gun::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    width: 10px;
+    height: 30px;
+    border-radius: 30px 15px 30px 10px;
+    transform: rotate(20deg);
+}
+
+.gun::before {
+    content: '';
+    width: 30px;
+    height: 15px;
+    position: absolute;
+    top: -15px;
+    left: 15%;
+    background-color: #2e2c2c;
+    border: 1px #000 solid;
+    border-radius: 20px;
+}
+
+.gun__last {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 15px;
+    height: 15px;
+    background-color: #121512;
+    border-radius: 50%;
+}
+
+.gun__last::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    right: 35px;
+    background-color: #000000;
+    width: 10px;
+    height: 30px;
+    border-radius: 30px 15px 30px 10px;
+}
+
+.gun-magazine {
+    position: absolute;
+    top: 5px;
+    left: 25px;
+    background-color: #1f261c;
+    width: 50px;
+    height: 30px;
+    border-radius: 15px;
+    z-index: 1;
+}
+
+.gun-magazine span {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    background-color: #e0ed65;
+    width: 20px;
+    height: 4px;
+    border: 1px #000 solid;
+    border-radius: 0 10px 10px 0;
+    z-index: 1;
+    transition: transition 0.3s ease;
+}
+
+.gun-magazine span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #948f00;
+    width: 7px;
+    height: 2px;
+    border-radius: 0 10px 10px 0;
+    z-index: 1;
+}
+
+.gun-magazine span:nth-child(1) {
+    top: 5px;
+    animation: shot-1 1s linear 1 9s forwards;
+}
+
+.gun-magazine span:nth-child(2) {
+    top: 10px;
+    animation: shot-1_2 0.5s 10.5s ease forwards, shot-2 1s linear 1 10s forwards;
+}
+
+.gun-magazine span:nth-child(3) {
+    top: 15px;
+    animation: shot-1_3 0.5s 11.5s ease forwards, shot-3 1s linear 1 11s forwards;
+}
+
+.gun-magazine span:nth-child(4) {
+    top: 20px;
+    animation: shot-1_4 0.5s 12.5s ease forwards, shot-4 1s linear 1 12s forwards;
+}
+
+.gun-magazine span:nth-child(5) {
+    top: 25px;
+    animation: shot-1_5 0.5 13.5s ease forwards, shot-5 1s linear 1 13s forwards;
+}
+
+@keyframes shot-1 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    10% {
+        transform: translate(0, -10px);
+    }
+
+    20% {
+        transform: translate(30px, -10px);
+    }
+
+    50% {
+        transform: translate(700px, -10px);
+        background-color: inherit;
+    }
+
+    100% {
+        transform: translate(700px, -10px);
+        background-size: cover;
+        border: none;
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: rgb(251, 72, 72) 0 20px 20px 20px;
+    }
+}
+
+@keyframes shot-2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    10% {
+        transform: translate(0, -15px);
+    }
+
+    20% {
+        transform: translate(30px, -15px);
+    }
+
+    50% {
+        transform: translate(700px, -15px);
+    }
+
+
+    100% {
+        transform: translate(700px, -10px);
+        border: none;
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: rgb(251, 72, 72) 0 20px 20px 20px;
+    }
+}
+
+@keyframes shot-3 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    10% {
+        transform: translate(0, -20px);
+    }
+
+    20% {
+        transform: translate(30px, -20px);
+    }
+
+    50% {
+        transform: translate(700px, -20px);
+    }
+
+
+    100% {
+        transform: translate(700px, -10px);
+        border: none;
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: rgb(251, 72, 72) 0 20px 20px 20px;
+    }
+}
+
+@keyframes shot-4 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    10% {
+        transform: translate(0, -25px);
+    }
+
+    20% {
+        transform: translate(30px, -25px);
+    }
+
+    50% {
+        transform: translate(700px, -25px);
+    }
+
+
+    100% {
+        transform: translate(700px, -10px);
+        border: none;
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: rgb(251, 72, 72) 0 20px 20px 20px;
+    }
+}
+
+@keyframes shot-5 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    10% {
+        transform: translate(0, -30px);
+    }
+
+    20% {
+        transform: translate(30px, -30px);
+    }
+
+    50% {
+        transform: translate(700px, -30px);
+    }
+
+    80% {
+        transform: translate(700px, -10px);
+        border: none;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+        box-shadow: rgb(251, 72, 72) 0 20px 20px 20px;
+    }
+}
+
+
+
+@keyframes shot-1_2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, -10px);
+    }
+}
+
+@keyframes shot-1_3 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, -15px);
+    }
+}
+
+@keyframes shot-1_4 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, -20px);
+    }
+}
+
+@keyframes shot-1_5 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(0, -25px);
+    }
+}
+
+
+
+.gun-magazine::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 3px;
+    height: 100%;
+    background-color: #000;
+}
+
+.gun-magazine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 35px;
+    width: 3px;
+    height: 100%;
+    background-color: #000;
+}
+
+
+.gun-left {
+    width: 0;
+    height: 0;
+    border-top: 20px solid transparent;
+    border-left: 40px solid #000;
+    border-bottom: 20px solid transparent;
+    transform: translate(-35px, -18px);
+    border-radius: 10px;
+    position: relative;
+    z-index: -1;
+}
+
+.car__window {
+    position: absolute;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.car__window::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #1f2021f4;
+}
+
+.car__window_right {
+    width: 150px;
+    height: 100px;
+    top: 0;
+    right: 0;
+    background-color: #458cb5;
+    border-radius: 0 50px 0 0;
+    border: 2px #000 solid;
+}
+
+.car__window_right img {
+    position: absolute;
+    top: 0;
+    left: -30px;
+    width: 200px;
+}
+
+.car__window_left img {
+    position: absolute;
+    top: -30px;
+    left: -90px;
+    width: 300px;
+    transform: scale(1.1);
+}
+
+.car__window_left span {
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    z-index: 2;
+    transform: rotate(90deg);
+    top: 0;
+    left: -15px;
+}
+
+.car__window_left span::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 3px;
+    top: 0;
+    left: 0;
+    transform: translate(0, -20px);
+    background-color: #000;
+    z-index: 2;
+}
+
+.car__window_left span::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 3px;
+    top: 0;
+    left: 0;
+    transform: translate(0, -40px);
+    background-color: #000;
+    z-index: 2;
+}
+
+.car__window_left::before {
+    border-radius: 40px 0 0 0;
+    transition: all 0.3s ease;
+    z-index: 3;
+}
+
+.car__window_left {
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    top: 0;
+    left: 0;
+    background-color: #458cb5;
+    border-radius: 40px 0 0 0;
+    border: 2px #000 solid;
+}
+
+.car__window_right::before {
+    display: inline-block;
+    border-radius: 0 50px 0 0;
+    transition: all 0.8s ease;
+    z-index: 3;
+    animation: window 2s ease forwards 5s;
+}
+
+.car__window_left:hover.car__window_left::before {
+    transform: translate(0, 50px);
+
+}
+
+.car__window_right:hover.car__window_right::before {
+    transform: translate(0, 70px);
+
+}
+
+.car__door {
+    width: 200px;
+    height: 200px;
+    background-color: #2d4327;
+    /* transform: translate(200px, 30px); */
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: 5px;
+    border: 3px #000 solid;
+    border-radius: 10px 50px 20px 20px;
+    transition: all 0.8s ease;
+    position: relative;
+    z-index: 20;
+}
+
+.car__wrapper:hover .car__door {
+    transform: translate(-180px, 0);
+}
+
+.car__wrapper:hover .car__door::before {
+    transform: rotate(-30deg);
+}
+
+.car__door img {
+    width: 100px;
+}
+
+
+.car__wrapper {
+    position: absolute;
+    top: 30px;
+    left: 198px;
+    width: 198px;
+    border-radius: 10px 50px 20px 20px;
+    height: 200px;
+    background-color: #fff;
+    background-image: url('https://cdn4.suspilne.media/images/resize/400x1.78/15997ec7416b5d48.jpg');
+    background-size: cover;
+}
+
+.car__door::before {
+    content: '';
+    width: 30px;
+    height: 10px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    background-color: #000;
+    border-radius: 10px 0 0 10px;
+}
+
+.car__line {
+    position: absolute;
+    width: 200px;
+    height: 3px;
+    background-color: #000;
+    top: 50%;
+    left: 0;
+}
+
+.car__line::after {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 3px;
+    background-color: #000;
+    top: 5px;
+    left: 0;
+}
+
+.car__wheels {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+}
+
+.car__wheel {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #404040;
+    outline: 5px #000 dashed;
+    animation: wheel 5s linear forwards, wheel-2 5s linear 14s;
+}
+
+@keyframes wheel {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes wheel-2 {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(360deg);
+    }
+
+    100% {
+        transform: rotate(1800deg);
+    }
+}
+
+.car__wheel_left {
+    left: 90px;
+}
+
+.car__wheels_right {
+    left: 450px;
+}
+
+.car__headlights {
+    position: absolute;
+}
+
+.car__headlights_left {
+    width: 35px;
+    height: 20px;
+    background-color: #eb0303;
+    border: 3px #000 solid;
+    border-radius: 5px;
+    bottom: 20px;
+    animation: car__headlights_left 5s ease 1;
+}
+
+.car__headlights_left:hover {
+    box-shadow: #eb0303 -10px 0px 30px 10px;
+}
+
+.car__headlights_right {
+    right: 0;
+    width: 45px;
+    height: 30px;
+    background-color: #e9ff26;
+    border: 2px #000 solid;
+    border-radius: 5px;
+    bottom: 15px;
+    animation: car__headlights_right 5s ease 1;
+}
+
+.car__headlights_right:hover {
+    box-shadow: #e0ed65 137px 31px 83px 57px;
+}
+
+@keyframes car__headlights_left {
+    0% {
+        box-shadow: none;
+    }
+
+    100% {
+        box-shadow: #eb0303 -10px 0px 30px 10px;
+    }
+}
+
+@keyframes car__headlights_right {
+    0% {
+        box-shadow: none;
+    }
+
+    100% {
+        box-shadow: #e0ed65 137px 31px 83px 57px;
+    }
+}
+
+.car__door-2 {
+    position: absolute;
+    bottom: 45px;
+    right: 25px;
+    width: 100px;
+    height: 100px;
+    background-color: #2d4327;
+    border: 3px #000 solid;
+    border-radius: 10px 50px 20px 20px;
+}
+
+.car__door-2::before {
+    content: '';
+    width: 30px;
+    height: 10px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    background-color: #000;
+    border-radius: 10px 0 0 10px;
+}
+
+@keyframes car-drive {
+    0% {
+        transform: translate(-700px, 0);
+    }
+
+    30% {
+        transform: translate(-200px, 0);
+    }
+
+    50% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(200px, 0);
+    }
+}
+
+@keyframes car-drive_2 {
+    0% {
+        transform: translate(200px, 0);
+
+    }
+
+    50% {
+        transform: translate(700px, 0), ;
+    }
+
+    100% {
+        transform: translate(2000px, 0);
+    }
+}
+
+@keyframes gun {
+    0% {
+        transform: translate(-60px, 100px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+@keyframes window {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+
+        transform: translate(0, 70px);
+    }
+}
+
+.chuilo {
+    position: absolute;
+    bottom: 50px;
+    left: 900px;
+    /* transform: translate(300px, 0); */
+    animation: chuilo 7s ease 9.5s forwards;
+}
+
+@keyframes chuilo {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: rotate(20deg);
+    }
+
+    60% {
+        transform: rotate(30deg);
+    }
+
+    70% {
+        transform: rotate(40deg);
+    }
+
+    80% {
+        transform: rotate(50deg);
+    }
+
+    100% {
+        transform: rotate(90deg);
+        opacity: 0;
+    }
+}
