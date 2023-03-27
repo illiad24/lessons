@@ -1,0 +1,266 @@
+/* header */
+.header__actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    z-index: 4;
+    min-height: 25px;
+}
+
+.header__socials {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.header__socials:not(:last-child):after {
+    content: '';
+    width: 1px;
+    height: 25px;
+    background-color: #E5E5E5;
+    transform: translate(-5px, 0px);
+    transition: background-color 0.3s;
+}
+
+.header__social {
+    font-weight: 500;
+    line-height: 2.08;
+    color: rgba(73, 80, 87, 0.5);
+    transition: color 0.3s;
+}
+
+.menu-open .header__social {
+    color: rgba(73, 80, 87, 1);
+}
+
+.menu-open .header__socials:not(:last-child):after {
+    background-color: #7c7676;
+}
+
+.header__search {
+    flex: 0 0 22px;
+    height: 25px;
+    width: 22px;
+    background: url('../img/blog/header/search.svg') center no-repeat;
+}
+
+@media (max-width:767.98px) {
+    .header__search {
+        background-size: 100%;
+    }
+}
+
+@media (max-width:479.98px) {
+    .header__socials {
+        gap: 15px;
+    }
+
+    .header__socials:not(:last-child):after {
+        content: '';
+        width: 1px;
+        height: 25px;
+        background-color: #E5E5E5;
+        transform: translate(0, 0px);
+    }
+
+}
+
+@media (any-hover:hover) {
+
+    .header__social:hover {
+        color: #000;
+    }
+}
+
+/* header */
+.main__content_2 {
+    background: url('../img/blog/main/fon.webp') 0 0 /cover no-repeat;
+}
+
+/* ----------------------- */
+.portfolio {
+    padding-bottom: 100px;
+}
+
+.portfolio__container {}
+
+.portfolio__header:not(:last-child) {
+    margin-bottom: 45px;
+}
+
+.header-portfolio {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+
+.header-portfolio__title {
+    flex: 0 1 400px;
+}
+
+.header-portfolio__filter {
+    align-self: flex-end;
+    padding-bottom: 11px;
+}
+
+.filter-portfolio {}
+
+.filter-portfolio__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 25px;
+    row-gap: 3px;
+}
+
+.filter-portfolio__item {}
+
+.filter-portfolio__link {
+    color: #c4c4c4;
+    font-weight: 500;
+    line-height: 2.08;
+    transition: color 0.3s;
+}
+
+.filter-portfolio__link.active {
+    color: #495057;
+}
+
+.portfolio__items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+    row-gap: 30px;
+}
+
+.portfolio__column {
+    padding: 0 15px;
+    flex: 0 0 33.333%;
+}
+
+.portfolio__item {}
+
+.item-portfolio {
+    display: block;
+}
+
+.item-portfolio__image {
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 63.613232%;
+    /* 250/393 */
+}
+
+.item-portfolio__image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+.item-portfolio__image:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.item-portfolio__pic {
+    transition: transform 0.8s;
+    max-width: 100%;
+}
+
+.item-portfolio__pic:hover {
+    transform: scale(1.05);
+}
+
+.item-portfolio__date {
+    color: #495057;
+    font-weight: 300;
+    line-height: 1.6;
+    /* 20/12 */
+}
+
+.item-portfolio__date:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.item-portfolio__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.56;
+    /* 25/16 */
+    transition: color 0.3s;
+}
+
+@media (max-width:1050px) {
+    .header-portfolio__title {
+        flex: 0 1 350px;
+    }
+}
+
+@media (max-width:991.98px) {
+    .portfolio {
+        padding-bottom: 50px;
+    }
+
+    .portfolio__items {
+        margin: 0 -10px;
+    }
+
+    .portfolio__column {
+        padding: 0 10px;
+    }
+
+    .header-portfolio {
+        flex-direction: column;
+    }
+
+    .header-portfolio__filter {
+        align-self: center;
+    }
+
+    .portfolio__header:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    .header-portfolio__title {
+        flex: 1 1 auto;
+    }
+}
+
+@media (max-width:767.98px) {
+    .portfolio__column {
+        flex: 0 0 50%;
+    }
+
+    .portfolio__items {
+        row-gap: 20px;
+    }
+}
+
+@media (max-width:479.98px) {
+    .portfolio__column {
+        flex: 0 0 100%;
+    }
+
+    .portfolio {
+        padding-bottom: 30px;
+    }
+
+    .item-portfolio__image:not(:last-child) {
+        margin-bottom: 16px;
+    }
+}
+
+@media (any-hover:hover) {
+    .filter-portfolio__link:hover {
+        color: #495057;
+    }
+
+    .item-portfolio__title:hover {
+        color: #ddbea9;
+    }
+}
+
+/* ---------------------------- */
