@@ -1,0 +1,234 @@
+.title {
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 1.3;
+    text-transform: uppercase;
+}
+.title-sm {
+    font-size: 24px;
+    line-height: 2.83;
+}
+.button {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    padding: 13px 45px;
+    border: 2px solid #000000;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
+    &:hover {
+        background-color: #000;
+        color: #fff;
+    }
+    @media (max-width: 479.98px) {
+        padding: 9px 20px;
+        font-size: 10px;
+    }
+}
+.card {
+    // .card__image
+    &__image {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 130.813953%; /* 450/344 */
+        &:hover img {
+            transform: scale(1.1);
+        }
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s;
+        }
+        &:not(:last-child) {
+            margin-bottom: 14px;
+            @media (max-width: 500px) {
+                margin-bottom: 0;
+            }
+        }
+    }
+    // .card__category
+    &__type {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 1.5;
+        text-transform: uppercase;
+        color: #bdbdbd;
+    }
+    // .card__name
+    &__name {
+        display: inline-block;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 1.5;
+        @media (any-hover: hover) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        @media (max-width: 500px) {
+            font-size: 12px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 18px;
+            @media (max-width: 500px) {
+                margin-bottom: 0;
+            }
+        }
+    }
+    // .card__prices
+    &__prices {
+        display: flex;
+        gap: 15px;
+    }
+
+    // .card__price
+    &__price {
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 1.5;
+        text-transform: uppercase;
+        @media (max-width: 500px) {
+            font-size: 14px;
+        }
+        // .card__price_new
+        &_new {
+            color: #eb5757;
+        }
+        // .card__price_old
+        &_old {
+            font-size: 14px;
+            line-height: 1.5;
+            text-transform: uppercase;
+            color: #828282;
+            text-decoration: line-through;
+            align-self: flex-end;
+        }
+    }
+}
+// --------------------------------
+.block {
+    position: relative;
+    max-width: 639px;
+    @media (max-width: 1450px) {
+        max-width: 500px;
+    }
+    @media (max-width: 700px) {
+        max-width: 300px;
+        padding: 15px;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 94.209703%; /* 602/639 */
+        height: 2px;
+        background-color: #000;
+        @media (max-width: 767.98px) {
+            display: none;
+        }
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2px;
+        height: 33.653846%; /* 105/312 */
+        background-color: #000;
+        @media (max-width: 767.98px) {
+            display: none;
+        }
+    }
+    // .block__title
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: 17px;
+            @media (max-width: 700px) {
+                margin-bottom: 0;
+            }
+        }
+        @media (max-width: 1450px) {
+            font-size: 40px;
+        }
+        @media (max-width: 700px) {
+            font-size: 24px;
+        }
+        @media (max-width: 500px) {
+            font-size: 14px;
+        }
+    }
+    // .block__text
+    &__text {
+        font-family: "Roboto";
+        font-weight: 300;
+        font-size: 25px;
+        line-height: 1.48;
+        letter-spacing: 0.01em;
+        &:not(:last-child) {
+            margin-bottom: 24px;
+            @media (max-width: 700px) {
+                margin-bottom: 8px;
+            }
+        }
+        @media (max-width: 1450px) {
+            font-size: 18px;
+        }
+        @media (max-width: 700px) {
+            font-size: 18px;
+        }
+        @media (max-width: 500px) {
+            font-size: 10px;
+        }
+    }
+    // .block__btn
+    &__btn {
+    }
+}
+// ------------------------------------
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    // .top__title
+    &__title {
+    }
+    // .top__arrows
+    &__arrows {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+    }
+}
+.arrows {
+}
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 40px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #c4c4c4;
+    transition: border 0.3s;
+    &:hover {
+        border: 2px solid #000;
+    }
+    // .arrow_left
+    &_left {
+    }
+    // .arrow_right
+    &_right {
+        transform: rotate(180deg);
+    }
+}
+// -------------------------------
